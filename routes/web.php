@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Category\CreateController;
 use App\Http\Controllers\Admin\Category\IndexController as CategoryAdminIndex;
 use App\Http\Controllers\Admin\Main\IndexController as AdminIndex;
 use App\Http\Controllers\Main\IndexController;
@@ -26,8 +27,9 @@ Route::prefix('admin')->group(function () {
     });
     Route::prefix('category')->group(function () {
         Route::controller(CategoryAdminIndex::class)->group(function () {
-            Route::get('/', '__invoke');
+            Route::get('/', '__invoke')->name('admin.category.index');
         });
+        Route::get('/create', [CreateController::class, '__invoke'])->name('admin.category.create');
     });
 });
 
