@@ -27,9 +27,13 @@
         <div class="row">
         
          <div class="col-12">
-        <form action="#" class="col-4">
+        <form action=" {{ route('admin.category.store') }}" method="POST" class="col-4">
+          @csrf
           <div class="form-group">
-              <input type="text" class="form-control" placeholder="Title">
+              <input type="text" class="form-control" name="title" placeholder="Title">
+              @error('title')
+                <div class="text-danger"> {{$message}} </div>
+              @enderror
           </div>
         <input type="submit" class="btn btn-primary" value="Add">
         </form>     

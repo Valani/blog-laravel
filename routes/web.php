@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\Category\CreateController;
 use App\Http\Controllers\Admin\Category\IndexController as CategoryAdminIndex;
+use App\Http\Controllers\Admin\Category\StoreController;
 use App\Http\Controllers\Admin\Main\IndexController as AdminIndex;
 use App\Http\Controllers\Main\IndexController;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,7 @@ Route::prefix('admin')->group(function () {
             Route::get('/', '__invoke')->name('admin.category.index');
         });
         Route::get('/create', [CreateController::class, '__invoke'])->name('admin.category.create');
+        Route::post('/', [StoreController::class, '__invoke'])->name('admin.category.store');
     });
 });
 
