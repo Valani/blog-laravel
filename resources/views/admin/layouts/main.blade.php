@@ -69,7 +69,7 @@
 <script src="{{asset('plugins/moment/moment.min.js')}}"></script>
 <script src="{{ asset('plugins/daterangepicker/daterangepicker.js')}}"></script>
 <!-- overlayScrollbars -->
-<script src="{{ asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+<script src="{{ asset('plugins/overlayscrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('dist/js/adminlte.js')}} "></script>
 </body>

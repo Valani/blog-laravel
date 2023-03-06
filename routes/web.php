@@ -1,8 +1,12 @@
 <?php
 
 use App\Http\Controllers\Admin\Category\CreateController;
+use App\Http\Controllers\Admin\Category\DeleteController;
+use App\Http\Controllers\Admin\Category\EditController;
 use App\Http\Controllers\Admin\Category\IndexController as CategoryAdminIndex;
+use App\Http\Controllers\Admin\Category\ShowController;
 use App\Http\Controllers\Admin\Category\StoreController;
+use App\Http\Controllers\Admin\Category\UpdateController;
 use App\Http\Controllers\Admin\Main\IndexController as AdminIndex;
 use App\Http\Controllers\Main\IndexController;
 use Illuminate\Support\Facades\Route;
@@ -32,6 +36,10 @@ Route::prefix('admin')->group(function () {
         });
         Route::get('/create', [CreateController::class, '__invoke'])->name('admin.category.create');
         Route::post('/', [StoreController::class, '__invoke'])->name('admin.category.store');
+        Route::get('/{category}', [ShowController::class, '__invoke'])->name('admin.category.show');
+        Route::get('/{category}/edit', [EditController::class, '__invoke'])->name('admin.category.edit');
+        Route::patch('/{category}', [UpdateController::class, '__invoke'])->name('admin.category.update');
+        Route::delete('/{category}', [DeleteController::class, '__invoke'])->name('admin.category.delete');
     });
 });
 

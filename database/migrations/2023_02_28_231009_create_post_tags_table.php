@@ -23,8 +23,8 @@ return new class extends Migration
             $table->index('post_id', 'post_tag_post_idx');
             $table->index('tag_id', 'post_tag_tag_idx');
             // FK
-            $table->foreign('post_id', 'post_catefory_fk')->on('posts')->references('id');
-            $table->foreign('tag_id', 'post_catefory_fk')->on('tags')->references('id');
+            $table->foreign('post_id', 'post_category_fk')->on('posts')->references('id');
+            $table->foreign('tag_id', 'post_category_fk')->on('tags')->references('id');
         });
     }
 
