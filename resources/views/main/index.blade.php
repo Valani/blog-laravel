@@ -32,7 +32,7 @@
                         <a href="#" class="blog-post-permalink">
                             <h6 class="blog-post-title">Front becomes an official Instagram Marketing Partner</h6>
                         </a>
-                    </div>
+                    </div>  
                 </div>
             </section>
             <div class="row">

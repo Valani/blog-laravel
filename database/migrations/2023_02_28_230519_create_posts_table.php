@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
-            $table->unsignedBigInteger('catefory_id')->nullable();
+            $table->unsignedBigInteger('category_id')->nullable();
             $table->timestamps();
 
-            $table->index('category_id', 'post_catefory_idx');
-            $table->foreign('catefory_id', 'post_catefory_fk')->on('catefories')->references('id');
+            $table->index('category_id', 'post_category_idx');
+            $table->foreign('category_id', 'post_category_fk')->on('catefories')->references('id');
         });
     }
 
